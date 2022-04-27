@@ -53,9 +53,11 @@ export default class ImageDisplay extends Component {
     render(){        
         return(
             <Fragment>  
-                  <div className={styles.ImageDisplay} data-testid="ImageDisplay">
-            <ShowImageComponent slideArray={this.slideImages} />
+  
+                  <div className={styles.ImageDisplay} id="right-middle">
+                  <ShowImageComponent slideArray={this.slideImages} />
             </div>
+
             </Fragment>
          
         );

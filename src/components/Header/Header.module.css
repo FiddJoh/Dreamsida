@@ -1,16 +1,9 @@
-
-
-
 .Header {
-
-    width: 90%;
-    height: 10em;
     text-align: center;
     background-color: lightcoral;    
-
+	height:10vh;
 }
 h1{
     font-size: 60px;
     padding-top: 0.7em;
 }
-

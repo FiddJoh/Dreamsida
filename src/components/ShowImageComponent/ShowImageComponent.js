@@ -21,7 +21,7 @@ export default class ShowImageComponent extends React.Component {
              {this.slideShow.map((slideArray, index)=> (
                 <div className="each-fade" key={index}>
                     <div className="image-container">
-                      <img src = {slideArray.url} alt="test" class ="fadeClass"></img>
+                      <img src = {slideArray.url} alt="test" className ="fadeClass"></img>
                       </div>
                     <span>{this.slideShow.caption}</span>
                   </div>

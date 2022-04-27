@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Sidebar.module.css';
 
 const Sidebar = () => (
+  <div id = "left" className="column">
   <div className={styles.Sidebar} data-testid="Sidebar">
     <h1 className="sidebarTitle">CV</h1>
     <ul>
@@ -15,6 +16,7 @@ const Sidebar = () => (
     <li><button className="years">Utställning</button></li>
     
     </ul>
+  </div>
   </div>
 );
 

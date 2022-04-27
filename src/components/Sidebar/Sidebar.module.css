@@ -1,12 +1,8 @@
 
 .Sidebar {
-    max-width: 300px;
-    min-width: 250px;
     background-color: lightpink;  
-    min-height: 100vh;
     text-align: center;
-    flex-direction: column;
-    
+    height:100vh;
 }
 button{
     background: none!important;
@@ -22,9 +18,5 @@ button{
     margin-top: 30px;
     margin-left: 10px;
     margin-bottom: 20px;
-}
-
-li{
-    text-align: center;
 }
 
