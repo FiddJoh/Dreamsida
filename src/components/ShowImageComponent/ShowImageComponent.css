@@ -1,0 +1,11 @@
+.ShowImageComponent{
+    background-color: blue;
+    width:50vh;
+    height: 50vh;
+}
+.fadeClass{
+    width: 40vw;
+}
+.image-container{
+    width: 40vw;
+}

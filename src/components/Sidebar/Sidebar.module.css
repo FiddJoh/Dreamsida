@@ -1,0 +1,30 @@
+
+.Sidebar {
+    max-width: 300px;
+    min-width: 250px;
+    background-color: lightpink;  
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    
+}
+button{
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+li{
+    text-align: center;
+}
+
