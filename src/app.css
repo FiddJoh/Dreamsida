@@ -2,18 +2,6 @@
 	
 }
 
-.container {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-}
-
-.sidebar {
-	page-break-before: always;
-	background-color: lightcoral;
-	height: 100vh;
-	width: 10%;
-
 }
 
 .headerrow {
@@ -29,5 +17,6 @@
 }
 
 .imageslide {
+	page-break-before: always;
 	border: dashed;
 }
