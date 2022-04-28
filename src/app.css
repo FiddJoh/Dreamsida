@@ -1,0 +1,33 @@
+.App {
+	
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.sidebar {
+	page-break-before: always;
+	background-color: lightcoral;
+	height: 100vh;
+	width: 10%;
+
+}
+
+.headerrow {
+	page-break-before: always;
+	border: solid;
+	height: 100vh;
+	width: 90%;
+	text-align: center;
+}
+
+.header {
+	
+}
+
+.imageslide {
+	border: dashed;
+}
