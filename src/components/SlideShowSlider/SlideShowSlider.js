@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useEffect, useState, useRef } from 'react';
 import styles from './SlideShowslider.css'
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
@@ -17,7 +17,8 @@ function SlideShowSlider() {
   let images2020 = importAll(require.context('../../../public/image/2020', false, /\.(png|jpe?g|svg)$/));
   let images2021 = importAll(require.context('../../../public/image/2021', false, /\.(png|jpe?g|svg)$/));
   let i = 0;
-	console.log(images2020.size);
+ 
+
 
 
   function resetTimeout() {
@@ -50,14 +51,13 @@ function SlideShowSlider() {
        {Object.keys(images2020).map((key, index)=> (
         	<img className="slide" key={key} src={text2020 + key} alt="painting" ></img>
        ))}
-      
-
-
       </div>
+	  
+	  
 
       <div className="slideshowDots">
-        {Object.keys(images2020).map((_, idx) => (
-			
+        {Object.keys(images2020).slice(index, index+5).map((_, idx) => (
+
           <img
             key={idx}
 			src={text2020 + _}

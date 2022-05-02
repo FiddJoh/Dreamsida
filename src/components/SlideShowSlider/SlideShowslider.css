@@ -1,22 +1,30 @@
 /* Slideshow */
 
 .slideshow {
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
-    max-width: 800px;
+    width:800px;
+
   }
   
   .slideshowSlider {
     white-space: nowrap;
-    transition: ease 1000ms;
+    transition: all 2s ease;
+
+
   }
+
   
   .slide {
+    
     display: inline-block;
-  
-    height: 800px;
-    width: 800px;
+    vertical-align: middle;
+    max-height: 1000px;
+    width:800px;
     border-radius: 40px;
+    margin: auto auto;
+
+
   }
   
   /* Buttons */
@@ -27,8 +35,8 @@
   
   .slideshowDot {
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
   
     cursor: pointer;
