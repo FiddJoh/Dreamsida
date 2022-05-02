@@ -1,8 +1,7 @@
 import ShowImageComponent from 'components/ShowImageComponent/ShowImageComponent';
 import React, { Component, Fragment} from 'react';
 import styles from './ImageDisplay.css'
-import 'react-slideshow-image/dist/styles.css';
-import {Slideshow, SlideshowItem } from 'components/Slide/SlideContainer'
+
 
 function importAll(r) {
     let images = {};
@@ -33,7 +32,7 @@ export default class ImageDisplay extends Component {
         return(
             <Fragment>  
             <div className={styles.ImageDisplay} id="right-middle">    
-            <Slideshow width={400} height={400}>
+           {/* <Slideshow width={400} height={400}>
                      {Object.keys(this.images2020).map((key, index)=> (
                          <SlideshowItem>
                             <img className="test" src={this.text2020 + key} alt="painting" ></img>
@@ -45,6 +44,8 @@ export default class ImageDisplay extends Component {
                         </SlideshowItem>
                      ))}      
             </Slideshow>
+                        */        }
+                        <ShowImageComponent slideArray={this.images2020} path={this.text2020}></ShowImageComponent>
             </div>
 
             </Fragment>

@@ -31,3 +31,6 @@
 .imageslide {
 	border: dashed;
 }
+.imagesByYearElement{
+	max-width:400px;
+}

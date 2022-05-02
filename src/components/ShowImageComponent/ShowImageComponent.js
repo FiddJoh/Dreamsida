@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import { Fade } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+
 import { Slide } from 'react-slideshow-image';
 import "./ShowImageComponent.css";
 
@@ -13,6 +13,7 @@ export default class ShowImageComponent extends Component {
         this.back = this.back.bind(this);
         this.next = this.next.bind(this);
         this.slideShow = this.props.slideArray;
+        this.path = this.props.path;
         this.state = {
             current: 0
           };
@@ -38,15 +39,15 @@ export default class ShowImageComponent extends Component {
         return(
             <div className="showImageComponent">
             <div className="slide-container">
-             <Slide ref={this.slideRef} {...properties}>
-             {this.slideShow.map((slideImage, index)=> (
-                <div className="each-slide" key={index}>
-                <img className="lazy" src={slideImage.url} alt="sample" />
-                {console.log(slideImage.url)}
-                    <span>{slideImage.caption}</span>
-                  </div>
-              ))} 
-            </Slide>
+             <Fade ref={this.slideRef} {...properties}>
+             {Object.keys(this.slideShow).map((key, index)=>(
+                   <div className="each-fade" key={index}>
+                   <img className="lazy" src={this.path + key} alt="sample" />
+                   {console.log(key)}
+
+                       </div>
+             ))}
+            </Fade>
           </div>
 
           

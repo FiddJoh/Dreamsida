@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from'./components/Header/Header';
 import Sidebar from 'components/Sidebar/Sidebar';
-import ImageDisplay from './components/ImageDisplay/ImageDisplay';
+import ImagesByYear from 'components/ImagesByYear/ImagesByYear';
 import 'app.css';
 
 class App extends Component {
@@ -21,9 +21,9 @@ class App extends Component {
     				</div>
     				<div className="headerrow">
     					<Header />
-    					<p>Här ska väl ImageDisplay vara</p>
+
     					<div>
-    						<p>Eller här i en ledig div</p>
+						<ImagesByYear years="2020"/>
     					</div>
     				</div>
     			</div>
