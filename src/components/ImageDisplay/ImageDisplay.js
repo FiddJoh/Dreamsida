@@ -1,6 +1,6 @@
-import ShowImageComponent from 'components/ShowImageComponent/ShowImageComponent';
 import React, { Component, Fragment} from 'react';
-import styles from './ImageDisplay.css'
+import styles from 'index.css'
+import SlideShow from 'react-slideshow-ui';
 
 
 function importAll(r) {
@@ -11,28 +11,40 @@ function importAll(r) {
 
 
 export default class ImageDisplay extends Component {
-        images = {};
-        fs;
+        images = [];
         constructor(props){
             super(props);
+            this.text2020 =  '/image/2020/';
+            this.text2021 =  '/image/2021/';        
+            this.images2020 = importAll(require.context('../../../public/image/2020', false, /\.(png|jpe?g|svg)$/));
+            this.images2021 = importAll(require.context('../../../public/image/2021', false, /\.(png|jpe?g|svg)$/));
+            this.index = 0;
 
-            
-           this.images2020 = importAll(require.context('../../../public/image/2020', false, /\.(png|jpe?g|svg)$/));
-           this.images2021 = importAll(require.context('../../../public/image/2021', false, /\.(png|jpe?g|svg)$/));
-           console.log(this.images);
+           Object.keys(this.images2020).map((key, index) =>{
+            this.images[index++] = this.text2020 + key;    
+           });
+           Object.keys(this.images2021).map((key, index) =>{
+            this.images[index++] = this.text2021 + key;    
+           });
+           
+           console.log("TEST: " + this.images);
         }
-
-    
-    text2020 = process.env.PUBLIC_URL + '/image/2020/';
-    text2021 = process.env.PUBLIC_URL + '/image/2021/';
-
-   
 
     render(){        
         return(
             <Fragment>  
-            <div className={styles.ImageDisplay} id="right-middle">    
-           {/* <Slideshow width={400} height={400}>
+            <div className={"slideShow"} id="right-middle">    
+            <SlideShow className="slideShow"
+            showFullscreenIcon={false}
+            images ={this.images}
+         withTimestamp={true}
+          pageWillUpdate={(index, image) => {
+            console.log(`Page Update! index: ${index}, image: ${image}`);
+          }}
+        />
+          
+          
+           {/* <Slideshow width={400} >
                      {Object.keys(this.images2020).map((key, index)=> (
                          <SlideshowItem>
                             <img className="test" src={this.text2020 + key} alt="painting" ></img>
@@ -44,8 +56,7 @@ export default class ImageDisplay extends Component {
                         </SlideshowItem>
                      ))}      
             </Slideshow>
-                        */        }
-                        <ShowImageComponent slideArray={this.images2020} path={this.text2020}></ShowImageComponent>
+            */}
             </div>
 
             </Fragment>

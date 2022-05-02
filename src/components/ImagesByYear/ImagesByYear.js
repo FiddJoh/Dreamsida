@@ -15,8 +15,7 @@ function ImagesByYear(props) {
     let imagesPath = process.env.PUBLIC_URL + '/image/';
     const [years, setYears] = useState(props.years);
     const [fileNames, setFileNames] = useState({});
-    console.log("YEARS: " + years);
-    console.log("YEARSProp: " + props.years);
+
 
     useEffect(() =>{
         setYears(props.years);
@@ -32,6 +31,9 @@ function ImagesByYear(props) {
     }
     else if(years == "2019"){
        // setFileNames(importAll(require.context('../../../public/image/2019', false, /\.(png|jpe?g|svg)$/, 'lazy')));
+    }
+    else{
+        setFileNames("");
     } 
     }, [years]);
    

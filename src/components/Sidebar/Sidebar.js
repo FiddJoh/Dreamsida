@@ -6,6 +6,7 @@ const Sidebar = (props) => (
   <div className={styles.Sidebar} data-testid="Sidebar">
     <h1 className="sidebarTitle">CV</h1>
     <ul>
+    <li><button className="years" onClick={() =>props.clickFunction(0)}>Start</button></li>
     <li><button className="years" onClick={() =>props.clickFunction(2021)}>2021</button></li>
     <li><button className="years" onClick={() =>props.clickFunction(2020)}>2020</button></li>
     <li><button className="years" onClick={() =>props.clickFunction(2019)}>2019</button></li>

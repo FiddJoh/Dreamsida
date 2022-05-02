@@ -88,6 +88,10 @@ body {
 #right-middle{
   float:left;
 }
+.slideShow{
+  width:400;
+  height:400;
+}
 
 
 code {

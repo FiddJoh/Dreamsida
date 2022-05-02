@@ -3,14 +3,27 @@ import Header from'./components/Header/Header';
 import Sidebar from 'components/Sidebar/Sidebar';
 import ImagesByYear from 'components/ImagesByYear/ImagesByYear';
 import 'app.css';
+import ImageDisplay from 'components/ImageDisplay/ImageDisplay';
+
+
 
 
 
 function App() {
 	function handleClick(value){
-		setYear(value);
+		if(value === 0){
+			setShowStartPage(true);
+		}
+		else{
+			setShowStartPage(false);
+			setYear(value);
+		}
 	}
+
+
+	
 	const [year, setYear] = useState("");
+	const [showStartPage, setShowStartPage] = useState(true);
 	return (
 
 		<React.StrictMode>
@@ -20,10 +33,18 @@ function App() {
 				</div>
 				<div className="headerrow">
 					<Header />
-
-					<div>
-					<ImagesByYear years={year}/>
-					</div>
+					
+						<div>
+						{!showStartPage &&
+							<ImagesByYear years={year}/>
+						}
+						{showStartPage &&
+							<ImageDisplay />
+							}
+						</div>
+					
+					
+					
 				</div>
 			</div>
 			</React.StrictMode>
