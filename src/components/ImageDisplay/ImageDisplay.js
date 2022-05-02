@@ -34,7 +34,7 @@ export default class ImageDisplay extends Component {
         return(
             <Fragment>  
             <div className={"slideShow"} id="right-middle">    
-            <SlideShow className="slideShow"
+            <SlideShow 
             showFullscreenIcon={false}
             images ={this.images}
          withTimestamp={true}

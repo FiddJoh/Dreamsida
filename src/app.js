@@ -4,7 +4,8 @@ import Sidebar from 'components/Sidebar/Sidebar';
 import ImagesByYear from 'components/ImagesByYear/ImagesByYear';
 import 'app.css';
 import ImageDisplay from 'components/ImageDisplay/ImageDisplay';
-
+import { Slideshow } from 'components/Slide/SlideContainer';
+import SlideShowSlider from 'components/SlideShowSlider/SlideShowSlider';
 
 
 
@@ -39,7 +40,7 @@ function App() {
 							<ImagesByYear years={year}/>
 						}
 						{showStartPage &&
-							<ImageDisplay />
+							<SlideShowSlider />
 							}
 						</div>
 					
