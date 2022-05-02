@@ -1,24 +1,26 @@
 import React from 'react';
 import styles from './Sidebar.module.css';
 
-const Sidebar = () => (
+const Sidebar = (props) => (
   <div id = "left" className="column">
   <div className={styles.Sidebar} data-testid="Sidebar">
     <h1 className="sidebarTitle">CV</h1>
     <ul>
-    <li><button className="years">2021</button></li>
-    <li><button className="years">2020</button></li>
-    <li><button className="years">2019</button></li>
-    <li><button className="years">2018</button></li>
-    <li><button className="years">2017</button></li>
-    <li><button className="years">2016</button></li>
-    <li><button className="years">2015</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2021)}>2021</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2020)}>2020</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2019)}>2019</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2018)}>2018</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2017)}>2017</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2016)}>2016</button></li>
+    <li><button className="years" onClick={() =>props.clickFunction(2015)}>2015</button></li>
     <li><button className="years">Utställning</button></li>
     
     </ul>
   </div>
   </div>
 );
+
+
 
 Sidebar.propTypes = {};
 

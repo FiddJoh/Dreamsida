@@ -7,25 +7,30 @@ function importAll(r) {
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
     return images;
   }
-  function setYearPath(year){
-    
-  }
+
 
 
 function ImagesByYear(props) {
+  
     let imagesPath = process.env.PUBLIC_URL + '/image/';
     const [years, setYears] = useState(props.years);
     const [fileNames, setFileNames] = useState({});
+    console.log("YEARS: " + years);
+    console.log("YEARSProp: " + props.years);
+
+    useEffect(() =>{
+        setYears(props.years);
+    }, [props.years])
 
    useEffect(() => {
-    if(years === "2021"){
+    if(years == "2021"){
          setFileNames(importAll(require.context('../../../public/image/2021', false, /\.(png|jpe?g|svg)$/, 'lazy')));
     }    
-    else if(years === "2020"){
+    else if(years == "2020"){
         console.log(years);
        setFileNames(importAll(require.context('../../../public/image/2020', false, /\.(png|jpe?g|svg)$/, 'lazy')));
     }
-    else if(years === "2019"){
+    else if(years == "2019"){
        // setFileNames(importAll(require.context('../../../public/image/2019', false, /\.(png|jpe?g|svg)$/, 'lazy')));
     } 
     }, [years]);
