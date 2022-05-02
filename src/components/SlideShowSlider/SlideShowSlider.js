@@ -40,7 +40,7 @@ function SlideShowSlider() {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [index, images2020]);
 
   return (
     <div className="slideshow">

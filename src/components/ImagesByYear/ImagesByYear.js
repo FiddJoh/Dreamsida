@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './ImagesByYear.css'
 
 
 
@@ -9,6 +10,9 @@ function importAll(r) {
   }
 
 
+function removeFileExtension(fileName){
+  return fileName.replace(/\.[^/.]+$/, "")
+}
 
 function ImagesByYear(props) {
   
@@ -40,11 +44,15 @@ function ImagesByYear(props) {
 
 
   return (
-    <div>
+    <div className="imagesContainer">
 
        {Object.keys(fileNames).map((key, index)=> (     
-        
-        <img className="imagesByYearElement" src={imagesPath + years + "/" + key} alt="painting" ></img>
+      
+        <>
+        <img className="imagesByYearElement" src={imagesPath + years + "/" + key} alt="painting"></img>
+        <div className="imageCaption">{removeFileExtension(key)}</div>
+        </>
+   
         
        ))
        }

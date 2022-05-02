@@ -3,8 +3,6 @@ import Header from'./components/Header/Header';
 import Sidebar from 'components/Sidebar/Sidebar';
 import ImagesByYear from 'components/ImagesByYear/ImagesByYear';
 import 'app.css';
-import ImageDisplay from 'components/ImageDisplay/ImageDisplay';
-import { Slideshow } from 'components/Slide/SlideContainer';
 import SlideShowSlider from 'components/SlideShowSlider/SlideShowSlider';
 
 
