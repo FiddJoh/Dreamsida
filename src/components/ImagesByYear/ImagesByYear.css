@@ -1,10 +1,23 @@
 .imagesContainer{
-
+display: flex;
+flex-wrap: wrap;
 
 }
 .imagesByYearElement{
-
+    padding-top:20px;
+  
 }
 .imageCaption{
-
+    padding-top:10px;
+    font-size: 20px;
+    
+}
+.containerForYear{
+    flex-direction: row;
+    width: 20%;
+    padding: 5px;
+    border: 3px solid #ccc;
+    background: #eee;
+    margin: auto;
+    padding: 15px 10px;
 }

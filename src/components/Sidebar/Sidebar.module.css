@@ -1,8 +1,9 @@
 
 .Sidebar {
-    background-color: lightpink;  
+    background-color: rgb(255, 255, 131);  
     text-align: center;
     height:100vh;
+
 }
 button{
     background: none!important;
@@ -11,7 +12,7 @@ button{
     /*optional*/
     font-family: arial, sans-serif;
     /*input has OS specific font-family*/
-    color: #069;
+    color: rgb(0, 0, 0);
     text-decoration: underline;
     cursor: pointer;
     font-size: 30px;

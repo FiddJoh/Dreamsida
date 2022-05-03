@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
 import { useEffect, useState, useRef } from 'react';
+import ConsoleLog from '../ConsoleLog/ConsoleLog'
 import styles from './SlideShowslider.css'
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 2500;
+const delay = 5000;
 
 function importAll(r) {
   let images = {};
@@ -16,9 +17,16 @@ function SlideShowSlider() {
   const text2021 =  '/image/2021/';        
   let images2020 = importAll(require.context('../../../public/image/2020', false, /\.(png|jpe?g|svg)$/));
   let images2021 = importAll(require.context('../../../public/image/2021', false, /\.(png|jpe?g|svg)$/));
-  let i = 0;
+  let lastIndex = 0;
  
-
+	function getImageIndex(idx){
+		if(lastIndex > index+idx){
+			lastIndex = index+idx-1;
+			return index+idx-1;
+		}
+			lastIndex = index+idx;
+			return index+idx;
+	}
 
 
   function resetTimeout() {
@@ -57,18 +65,20 @@ function SlideShowSlider() {
 
       <div className="slideshowDots">
         {Object.keys(images2020).slice(index, index+5).map((_, idx) => (
-
-          <img
-            key={idx}
-			src={text2020 + _}
-			alt="painting"
-            className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></img>
+	
+          <><img
+				key={idx}
+				src={text2020 + _}
+				alt="painting"
+				className={`slideshowDot${index === idx ? " active" : ""}`}
+				onClick={() => {
+					setIndex(getImageIndex(idx));
+				} }
+			></img><ConsoleLog>{"Index: " + index}</ConsoleLog><ConsoleLog>{"Idx: "+ getImageIndex(idx) }</ConsoleLog></>
+		  
         ))}
       </div>
+
     </div>
   );
 }

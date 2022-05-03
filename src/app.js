@@ -33,14 +33,14 @@ function App() {
 				<div className="headerrow">
 					<Header />
 					
-						<div>
+					
 						{!showStartPage &&
 							<ImagesByYear years={year}/>
 						}
 						{showStartPage &&
 							<SlideShowSlider />
 							}
-						</div>
+					
 					
 					
 					

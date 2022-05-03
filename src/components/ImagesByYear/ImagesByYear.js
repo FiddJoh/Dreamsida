@@ -48,10 +48,11 @@ function ImagesByYear(props) {
 
        {Object.keys(fileNames).map((key, index)=> (     
       
-        <>
+        <div className="containerForYear">
         <img className="imagesByYearElement" src={imagesPath + years + "/" + key} alt="painting"></img>
+
         <div className="imageCaption">{removeFileExtension(key)}</div>
-        </>
+        </div>
    
         
        ))
