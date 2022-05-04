@@ -15,8 +15,13 @@ const Sidebar = (props) => (
     <li><button className="years" onClick={() =>props.clickFunction(2016)}>2016</button></li>
     <li><button className="years" onClick={() =>props.clickFunction(2015)}>2015</button></li>
     <li><button className="years">Utställning</button></li>
-    
-    </ul>
+    </ul>  
+    <div className="contactInfo">
+      <p>Email: dream@dream.com</p>
+      <p>Phone: dream@dream.com</p>
+      <p>Instagram: dream@dream.com</p>
+      <p>Facebook: dream@dream.com</p>
+      </div>
   </div>
   </div>
 );

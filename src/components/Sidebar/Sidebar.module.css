@@ -3,6 +3,10 @@
     background-color: rgb(255, 255, 131);  
     text-align: center;
     height:100vh;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-left-style: solid;
+    border-left-width: 3px;
 
 }
 button{
@@ -20,4 +24,12 @@ button{
     margin-left: 10px;
     margin-bottom: 20px;
 }
+
+p{
+    font-size: 1vw;
+    margin-bottom:20px;
+    margin-top:2.5vh;
+}
+
+
 
